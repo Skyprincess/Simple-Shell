@@ -1,1 +1,1 @@
-project on simple shell by Stella Ugookonkwo and Iyase Amaka
+project on simple shell by Ugoo-okonkwo Stella and Iyase Amaka
