@@ -19,11 +19,11 @@ int index;
 
 for (size = 0; environ[size]; size++)
 ;
- 
+
 new_environ = malloc(sizeof(char *) * (size + 1));
 if (!new_environ)
 return (NULL);
-              
+
 for (index = 0; environ[index]; index++)
 {
 new_environ[index] = malloc(_strlen(environ[index]) + 1);
@@ -58,7 +58,7 @@ free(environ);
 /**
  * _getenv - Gets an environmental variable from the PATH.
  * @var: The name of the environmental variable to get.
- * 
+ *
  * Return: If the environmental variable does not exist - NULL.
  * Otherwise - a pointer to the environmental variable.
  */
@@ -73,6 +73,6 @@ for (index = 0; environ[index]; index++)
 if (_strncmp(var, environ[index], len) == 0)
 return (&environ[index]);
 }
- 
+
 return (NULL);
 }

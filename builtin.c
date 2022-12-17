@@ -141,7 +141,7 @@ return (-1);
 dir_info = malloc(sizeof(char *) * 2);
 if (!dir_info)
 return (-1);
-            
+
 dir_info[0] = "OLDPWD";
 dir_info[1] = oldpwd;
 if (shellby_setenv(dir_info, dir_info) == -1)
@@ -190,6 +190,6 @@ else if (_strcmp(args[0], "help") == 0)
 help_help();
 else
 write(STDERR_FILENO, name, _strlen(name));
-                                          
+
 return (0);
 }
