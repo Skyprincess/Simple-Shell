@@ -74,7 +74,8 @@ int call_args(char **args, char **front, int *exe_ret)
 					free(args[index]);
 				return (ret);
 			}
-			else if (_strncmp(args[index], "&&", 2) == 0)
+}
+                        else if (_strncmp(args[index], "&&", 2) == 0)
 			{
 				free(args[index]);
 				args[index] = NULL;

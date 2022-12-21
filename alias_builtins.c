@@ -33,22 +33,22 @@ int shellby_alias(char **args, char __attribute__((__unused__)) **front)
 	{
 		temp = aliases;
 		value = _strchr(args[i], '=');
-	       if (!value)
-	       {
-		       while (temp)
-		       {
-			       if (_strcmp(args[i], temp->name) == 0)
-			       {
-				       print_alias(temp);
-				       break;
-			       }
-			       temp = temp->next;
-		       }
-		       if (!temp)
-			       ret = create_error(args + i, 1);
-	       }
-	       else
-		       set_alias(args[i], value);
+if (!value)
+{
+while (temp)
+{
+if (_strcmp(args[i], temp->name) == 0)
+{
+print_alias(temp);
+break;
+}
+temp = temp->next;
+}
+if (!temp)
+ret = create_error(args + i, 1);
+}
+else
+set_alias(args[i], value);
 	}
 	return (ret);
 }
