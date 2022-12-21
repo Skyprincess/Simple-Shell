@@ -18,6 +18,7 @@ char *get_args(char *line, int *exe_ret)
 	size_t n = 0;
 	ssize_t read;
 	char *prompt = "$ ";
+int hist;
 
 	if (line)
 		free(line);
@@ -75,7 +76,7 @@ int call_args(char **args, char **front, int *exe_ret)
 				return (ret);
 			}
 }
-                        else if (_strncmp(args[index], "&&", 2) == 0)
+else if (_strncmp(args[index], "&&", 2) == 0)
 			{
 				free(args[index]);
 				args[index] = NULL;
@@ -111,6 +112,7 @@ int run_args(char **args, char **front, int *exe_ret)
 {
 	int ret, i;
 	int (*builtin)(char **args, char **front);
+int hist;
 
 	builtin = get_builtin(args[0]);
 
