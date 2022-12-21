@@ -4,7 +4,7 @@
 /*
  * File: shell.h
  * Auth: Ugoo-okonkwo Stella
- * 	 Iyase Amaka
+ * Iyase Amaka
  */
 
 #include <fcntl.h>
@@ -138,4 +138,4 @@ void help_unsetenv(void);
 void help_history(void);
 
 int proc_file_commands(char *file_path, int *exe_ret);
-#endif
+#endif
